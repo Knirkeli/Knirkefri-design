@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'isnter';
+    src: url('/fonts/Inter-VariableFont_slnt\,wght.ttf') format("truetype");
+}
+
+/*all*/
+header {
+    background-color: #d9d9d9;
+    font-family: "inter verdana";
+}
+
+body {
+    background-color: aquamarine;
+    min-height: 100vh;
+}
+
+/*home*/
+
+.homepage {
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px
+}
