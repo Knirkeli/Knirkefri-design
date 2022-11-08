@@ -24,3 +24,8 @@ body {
     grid-template-columns: 1fr;
     grid-gap: 10px
 }
+
+/*Return*/
+.form__input {
+    display: block;
+}
