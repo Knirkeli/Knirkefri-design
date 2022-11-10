@@ -1,6 +1,11 @@
-# Project Title
+# Rainy Days
 
 A simple overview of use/purpose.
+github reposetory: 
+
+figma prototype: https://www.figma.com/proto/VP87lebSOdSqFsa72TVvn8/Rainyday?page-id=0%3A1&node-id=3%3A2&starting-point-node-id=3%3A2&scaling=scale-down
+
+Netlify:
 
 ## Description
 
@@ -37,4 +42,4 @@ Any advice for common problems or issues.
 
 ## Authors
 
-Contributors' names and contact info
+Eirik Kirkeli knirkeli88@msn.com
