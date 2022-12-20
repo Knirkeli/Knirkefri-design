@@ -9,6 +9,7 @@ h1, h2, h3, a, li, p, table {
 }
 
 header {
+ 
     display: flex;
     flex-direction:column;
     height: 120px;
@@ -18,13 +19,17 @@ header {
     color: white;
     left: 0px;
     top: 0px;
-    right: 0px;  
-    align-items: center;
-      
+    right: 0px; 
+    bottom: 50px;    
+}
+
+header label {
+    display: none;
 }
 
 .header_text {
     display: flex;
+    align-self: center;
 }
 
 .header_2 {
@@ -36,7 +41,7 @@ nav li {
     display: inline-block;
     position: relative;
     margin-left: 50px;
-    margin-right: 50px;    
+    margin-right: 50px;   
 }
 
 nav ul {
@@ -49,6 +54,7 @@ nav a {
     color: inherit;
     text-decoration: none;
     text-transform: uppercase;
+    
 }
 
 nav a:hover {
@@ -56,61 +62,190 @@ nav a:hover {
     transition: all ease-in-out 300ms;
 }
 
+#menu_checkbox {
+    display: none;
+}
+.burger {
+    display: none;
+}
+/*nav media*/
+
+@media (max-width:700px) {
+
+    .header_text {
+        display: flex;
+        align-self: center;
+    }
+    
+    
+    header label {
+        display: block;
+        
+    }
+    nav, #menu-checkbox {
+        display: none;
+        
+    }
+    
+    
+    
+    #menu_checkbox:checked ~ nav {
+        display: block;
+
+    }
+
+    nav li {
+        display: block;
+        
+    }
+   
+    .fa-solid:hover {
+        color: black;
+        transition:all ease-in-out 300ms
+    }
+
+    nav {
+        position: absolute;
+        background-color: #245C64;
+        left: 0px;
+        z-index: 2;
+    }
+    main {
+        position: relative;
+    }
+}
+@media (min-width:700px) {
+    header {
+ 
+ 
+        align-items: center;
+   
+    }
+}
+
 /*landing*/
 
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body{    
+    margin: 0px;
+    padding: 0px;
+}
+
+
 main {
-    display: grid;
-    align-items:center;
-    justify-items: space-evenly;
-    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    min-height: 1000px;
+    justify-items: space-between;
     
 }
 
-.card img {
-    display: flex;
-    max-width: 45px;
-    height: 80%;
-    border-radius: 20px;
-    justify-self: center;
-    align-self: center;
-   
-} 
 
-.location img {
-    display: flex;
-    max-width: 45px;
-    height: 80%;
-    border-radius: 20px;
-    justify-self: center;
-    align-self: center;
-}
 
 .card {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-rows: repeat(2,auto);  
+    grid-template-columns: 15% 85%;   
     width: 80%;
-    height: 80px;
+    min-height: 80px;
     box-shadow: 4px 4px 8px rgb(0 0 0 / 15%);
-    margin:auto auto;
-    font-size: x-small;
-    
-    
+    margin: auto auto;
+    font-size: small;
+    position: relative;
     }
 
-    h3 {
+    
+    .card_img {
+        display: inline-grid;
+        justify-items:left;
+        align-items: center;
+    } 
+
+    .card_picture {
         display: flex;
+        width: 90%;
+        min-height: 40%;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .card_info {
+        display: inline-grid;        
+        justify-items: center;
+        align-items: left;     
     }
     
+    .card_header {
+        text-transform: uppercase;
+        
+    }
+
+    .bullet_point {
+        display: inline-flex;
+
+        
+    }
+    .link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      } 
+/*Footer*/
+
     footer {
         background-color: #FDB969;
+
+    }
+
+    .info_container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;  
     }
+
+    .booking {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        
+    }
+
     .book_button {
-        position: relative;
+        
+        height: 50px;
+        width: 100px;
+        border-radius: 10px;
+        border-style: none;
+        text-transform: uppercase;
+        text-transform: bold;
+        
+    }
+
+
+
+    .location img {
+        display: flex;
+        max-width: 55px;
+        max-height: 55px;
+        border-radius: 20px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /*footer media*/
+    @media (max-width:700px) {
+        footer {
+            display: flex;
+        flex-direction: column;    
+        }
         
     }
 
