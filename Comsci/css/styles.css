@@ -78,7 +78,8 @@ align-items: space-around;
 
 nav a {
     color: inherit;
-    text-transform: uppercase;    
+    text-transform: uppercase;
+    transition: all ease-in-out 300ms;   
 }
 
 #menu_checkbox {
@@ -92,13 +93,11 @@ nav a {
 
 nav a:hover {
     color: black;
-    transition: all ease-in-out 300ms;
 }
 
 .shared_picture:hover {
     width: 500px;
     height: 350px;
-    transition: all ease-in-out 400ms;
     
 }
 
@@ -210,6 +209,8 @@ gap: 1.5rem;
 .shared_picture {
     width: 350px;
     height: 200px;
+    transition:all ease-in-out 300ms
+    
     
 }
 
@@ -257,6 +258,9 @@ gap: 1.5rem;
     }
 }
 
+
+
+
 .card {
     display: grid;
     grid-template-rows: repeat(2,auto);
@@ -265,7 +269,7 @@ gap: 1.5rem;
     min-height: 80px;
     box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
     margin: auto auto;
-    font-size: small;|
+    font-size: small;
     position: relative;
 }
 
@@ -336,24 +340,67 @@ gap: 1.5rem;
 /*booking*/
 
 .booking_page {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap:30px
+}
+fieldset {
+    border-style: none;
 }
 
-/* .book_card {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-} */
+.book_card {
+    width: 80%;
+    min-height: 80px;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
+    margin: auto auto;
+    
+}
+
 
 .customer_input {
     display: grid;
-    grid-template-columns: repeat (3, 1fr);
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
 }
 
-legend {
-    max-width: 50%;
+.input {
+    display: flex;
+    align-content: baseline;
+    justify-content: space-around;
 }
 
+select {
+    align-self: center;
+}
+
+
+
+.group_select {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*book success*/
+
+.card_qr {
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    transition: all ease-in-out 500ms;
+}
+
+
+.sucess {
+    margin: 30px;
+}
+
+.card_qr:hover {
+    display: flex;
+    width: 500px;
+    padding: 10px;
+
+}
 
 /*Footer*/
 
