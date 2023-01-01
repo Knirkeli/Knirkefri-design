@@ -278,10 +278,9 @@ gap: 1.5rem;
     display: grid;
     grid-template-rows: repeat(2,auto);
     grid-template-columns: 15% 85%;
-    width: 80%;
-    min-height: 80px;
+    width: 90vw;
     box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
-    margin: auto auto;
+    margin: 30px auto;
     font-size: small;
     position: relative;
 }
@@ -298,18 +297,24 @@ gap: 1.5rem;
     width: 90%;
     min-height: 40%;
     border-radius: 20px;
-    padding: 10px;
+    margin: auto auto;
 }
 
 .card_info {
-    display: inline-grid;        
-    justify-items: center;
-    align-items: left;     
+    display: flex;
+    flex-direction: column;
 }
     
 .card_header {
     text-transform: uppercase;
-        
+    align-self: center;
+    text-align: center;       
+}
+
+.exibit_text {
+    align-self: center;
+    padding-left: 10px;
+    padding-right: 10px;    
 }
 
 .bullet_point {
@@ -338,12 +343,11 @@ gap: 1.5rem;
     display: grid;
     justify-content: space-around;
     width: 80%;
-    min-height: 600px;
     box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
     margin: auto auto;
     font-size: small;
     position: relative;
-    margin-top: 40px;    
+    margin-top: 30px;    
 }
 
 .last_card {
@@ -415,6 +419,31 @@ select {
 
 }
 
+/*Info*/
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info_card {
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
+    margin: 30px auto;
+    font-size: small;
+}
+
+.info_text {
+    display: flex;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
 /*Footer*/
 
     footer {
@@ -425,6 +454,7 @@ select {
     footer h1, h2 {
         display: flex;
         justify-content: center;
+        text-align: center;
     }
 
     .info_container{
