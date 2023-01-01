@@ -1,9 +1,34 @@
 
-/*font*/
+/*fonts*/
 
-h1, h2, h3, a, li, p, table {
+h1, h2, h3, a, li, p, table, label, option, legend {
     font-family: 'Andika', sans-serif;
 }
+
+/*universal*/
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body{    
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.button {
+    height: 3rem;
+    width: 6rem;
+    border-radius: 10px;
+    border-style: none;
+    text-transform: uppercase;
+}
+
+
 
 /*header*/
 header {
@@ -36,28 +61,24 @@ header label {
 }
 
 nav li {
-    display: inline-block;
+    display: inline-flex;
+    
+    bottom: 0px;
     position: relative;
-    margin-left: 50px;
-    margin-right: 50px;   
+    margin-left: 40px;
+    margin-right: 40px;   
 }
 
 nav ul {
 margin: 0;
 padding: 0;
 list-style: none;
+align-items: space-around;
 }
 
 nav a {
     color: inherit;
-    text-decoration: none;
-    text-transform: uppercase;
-    
-}
-
-nav a:hover {
-    color: black;
-    transition: all ease-in-out 300ms;
+    text-transform: uppercase;    
 }
 
 #menu_checkbox {
@@ -66,6 +87,22 @@ nav a:hover {
 .burger {
     display: none;
 }
+
+/* animation */
+
+nav a:hover {
+    color: black;
+    transition: all ease-in-out 300ms;
+}
+
+.shared_picture:hover {
+    width: 500px;
+    height: 350px;
+    transition: all ease-in-out 400ms;
+    
+}
+
+
 /*nav media*/
 
 @media (max-width:700px) {
@@ -114,39 +151,121 @@ nav a:hover {
     header { 
         align-items: center;
     }
+    .exibit {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        
+    }
 }
+
 
 /*landing page*/
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-body{    
-    margin: 0px;
-    padding: 0px;
-}
-
-
-main {
+ main .homepage {
     display: flex;
     flex-direction: column;
     min-height: 1000px;
-    justify-items: space-between;
+
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+    margin: auto;
+    justify-content: center;
+}
+
+.heading_container {
+    margin: 30px auto;
+
+}
+
+.next_events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.heading_container img {
+    display: flex;
+    width: 65vw;
+    margin: 30px auto;
+}
+
+.user_photos {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5rem;
+}
+
+.user_container {
+    margin: 30px auto;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.shared_picture {
+    width: 350px;
+    height: 200px;
     
 }
 
+@media (max-width:810px) {
+    .shared_picture {
+        width: 300px;
+        height: 160px;
+        transition:ease-in-out 300ms;
+        
+    }   
+}
+
+@media (max-width:700px) {
+    
+    main .homepage {
+        display: flex;
+        flex-direction: row;
+        min-height: 1000px;
+        justify-items: space-around;
+    
+    }
+
+
+    .heading_container {
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto auto; 
+    }
+
+    .heading_container img {
+        display: flex;
+        width: 100%;
+    }
+
+    .user_photos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        }
+    .shared_picture {
+        width: 450px;
+        height: 300px;
+        transition:ease-in-out 300ms;           
+    }
+}
 
 .card {
     display: grid;
-    grid-template-rows: repeat(2,auto);  
-    grid-template-columns: 15% 85%;   
+    grid-template-rows: repeat(2,auto);
+    grid-template-columns: 15% 85%;
     width: 80%;
     min-height: 80px;
-    box-shadow: 4px 4px 8px rgb(0 0 0 / 15%);
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
     margin: auto auto;
-    font-size: small;
+    font-size: small;|
     position: relative;
 }
 
@@ -194,16 +313,16 @@ main {
 /*Exibits*/
 
 .exibit {
-    display: flex;
-    
+    display: grid;
 
 }
 
 .exibit_card {
-    display: grid;  
+    display: grid;
+    justify-content: space-around;
     width: 80%;
     min-height: 600px;
-    box-shadow: 4px 4px 8px rgb(0 0 0 / 15%);
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
     margin: auto auto;
     font-size: small;
     position: relative;
@@ -214,15 +333,38 @@ main {
     margin-bottom: 30px;
 }
 
+/*booking*/
 
+.booking_page {
+display: flex;
+flex-direction: column;
+}
+
+/* .book_card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+.customer_input {
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+}
+
+legend {
+    max-width: 50%;
+}
 
 
 /*Footer*/
 
     footer {
         background-color: #FDB969;
-        
+        margin-top: auto;       
+    }
 
+    footer h1, h2 {
+        display: flex;
+        justify-content: center;
     }
 
     .info_container{
@@ -232,32 +374,32 @@ main {
     
     }
 
-    .booking {
+    .booking_container {
         display: flex;
         justify-content: space-around;
-        align-content: center;
-        
-    }
-
-    .book_button {
-        
-        height: 50px;
-        width: 100px;
-        border-radius: 10px;
-        border-style: none;
-        text-transform: uppercase;
-        text-transform: bold;
+        align-items: center;
+        box-shadow: 0px 0px 30px rgb(0 0 0 / 20%);
+        max-width: 80vw;
+        margin: auto auto;
         
     }
 
 
+
+    .book_link_button {
+        align-self: center;        
+
+    }
+
+    .location {
+        display: flex;
+        flex-direction: column;
+    }
 
     .location img {
-        display: flex;
         max-width: 55px;
         max-height: 55px;
         border-radius: 20px;
-        justify-self: center;
         align-self: center;
     }
 
@@ -270,64 +412,5 @@ main {
         
     }
 
-    /* .card_header {
-        justify-self: center;
-        align-self: fi;
-    } */
-
-
-
-/*
-nav {
-    display: 
-    position: absolute;
-    min-width: 100vw;
-    min-height: 30vh;
-    left: 0%;
-    top: 99%;
-    background-color: var(--green1);
-  } */
-
-/*universal*/
-
-/*header*/
-/* header {
-  
-  
-    background-color: #245C64;
-    width: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed; 
-    z-index: 2;
-    top: 0;
-    margin-bottom: 100%;
-   font-family: andika;
-}
-
-@media screen and (min-width: 751px)
-.nav_links {
-  list-style: none;
-  display: flex
-  justify-content: center;
-  padding: 0;
-  margin: 10px auto;
-}
-
-h1 {
-    display: inline;
-}*/
-/*Landing*/
-
-
-/*book*/
-
-/*about*/
-
-
-/*book*/
-
-
-/*book*/
+   
+    
