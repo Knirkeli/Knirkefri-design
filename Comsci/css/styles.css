@@ -95,12 +95,13 @@ nav a:hover {
     color: black;
 }
 
+@media (min-width:700px) {
 .shared_picture:hover {
     width: 500px;
     height: 350px;
     
 }
-
+}
 
 /*nav media*/
 
@@ -171,9 +172,10 @@ nav a:hover {
     display: flex;
     width: 90vw;
     box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
-    margin: auto;
+    margin: 30px auto;
     justify-content: center;
 }
+
 
 .heading_container {
     margin: 30px auto;
@@ -190,7 +192,7 @@ nav a:hover {
 .heading_container img {
     display: flex;
     width: 65vw;
-    margin: 30px auto;
+    
 }
 
 .user_photos {
@@ -230,20 +232,22 @@ gap: 1.5rem;
         flex-direction: row;
         min-height: 1000px;
         justify-items: space-around;
+        align-content: center;
     
     }
 
 
     .heading_container {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         text-transform: uppercase;
-        margin: auto auto; 
+         
+        
     }
 
     .heading_container img {
         display: flex;
-        width: 100%;
     }
 
     .user_photos {
@@ -251,9 +255,18 @@ gap: 1.5rem;
         grid-template-columns: repeat(1, 1fr);
         gap: 1.5rem;
         }
+
     .shared_picture {
         width: 450px;
         height: 300px;
+        transition:ease-in-out 300ms;           
+    }
+}
+
+@media (max-width:550px) {
+    .shared_picture {
+        width: 350px;
+        height: 210px;
         transition:ease-in-out 300ms;           
     }
 }
@@ -434,7 +447,8 @@ select {
 
 
     .book_link_button {
-        align-self: center;        
+        align-self: center;
+        margin: 20px;        
 
     }
 
