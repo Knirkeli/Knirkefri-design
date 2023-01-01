@@ -141,6 +141,7 @@ nav a:hover {
         background-color: #245C64;
         left: 0px;
         z-index: 2;
+        top: 120px;
     }
     main {
         position: relative;
@@ -265,7 +266,7 @@ gap: 1.5rem;
 
 @media (max-width:550px) {
     .shared_picture {
-        width: 350px;
+        width: 300px;
         height: 210px;
         transition:ease-in-out 300ms;           
     }
@@ -359,31 +360,50 @@ gap: 1.5rem;
 .booking_page {
     display: flex;
     flex-direction: column;
-    gap:30px
 }
 fieldset {
     border-style: none;
 }
 
 .book_card {
-    width: 80%;
+    width: 90vw;
     min-height: 80px;
     box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
-    margin: auto auto;
-    
+    margin: 30px auto;  
 }
 
 
 .customer_input {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 5fr 1fr;
     align-items: center;
+}
+
+@media (max-width:700px) {
+    .customer_input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: space-around;
+    } 
 }
 
 .input {
     display: flex;
     align-content: baseline;
     justify-content: space-around;
+}
+
+label {
+    display: inline-flex;
+    width: 200px;
+
 }
 
 select {
@@ -407,10 +427,6 @@ select {
     transition: all ease-in-out 500ms;
 }
 
-
-.sucess {
-    margin: 30px;
-}
 
 .card_qr:hover {
     display: flex;
